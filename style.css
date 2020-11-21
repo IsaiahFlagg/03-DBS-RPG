@@ -1,0 +1,69 @@
+body {
+    background-size: cover;
+    background-image: url("./img/background.PNG");
+    
+}
+
+span {
+    background-color: aliceblue;
+}
+
+#title {
+    background-color: aliceblue;
+    padding-bottom: 10px;
+}
+
+#goodGuys {
+    border: 5px solid green;
+    background-color: green;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#charactersGood1, #charactersGood2, #charactersGood3{
+    max-width: 100px;
+    max-height: 100px;
+    border: 6px solid green;
+    background-color: green;
+}
+
+#goodTeam {
+
+}
+
+#goodFighter {
+    /* border: 5px solid green; */
+    border-top: 5px solid black;
+    background-color: green;
+    justify-content: center;
+    margin: 0 auto;
+    /* padding-top: 50px; */
+    min-height: 110px;
+}
+
+#badFighter {
+    /* border: 5px solid red; */
+    border-bottom: 5px solid black;
+    background-color: red;
+    justify-content: center;
+    margin: 0 auto;
+    /* padding-top: 50px; */
+    min-height: 110px;
+}
+
+#charactersBad1, #charactersBad2, #charactersBad3{
+    max-width: 100px;
+    max-height: 100px;
+    border: 6px solid red;
+    background-color: red;
+}
+
+#badGuys {
+    border: 5px solid red;
+    background-color: red;
+    justify-content: center;
+    margin: 0 auto;
+    /* padding-top: 50px; */
+}
+
