@@ -19,6 +19,7 @@ span {
     justify-content: center;
     margin: 0 auto;
     padding-top: 20px;
+    min-height: 230px;
 }
 
 #gokumui {
@@ -86,6 +87,7 @@ span {
     background-color: red;
     justify-content: center;
     margin: 0 auto;
+    min-height: 200px;
     /* padding-top: 50px; */
 }
 
@@ -93,3 +95,4 @@ span {
     /* background-color: green;
     color: green; */
 }
+
