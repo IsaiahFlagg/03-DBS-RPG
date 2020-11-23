@@ -4,7 +4,7 @@ const enemyCharacterPicker = $(".pickEnemyCharacter")
 const characterOne = $("#gokumui")
 const characterTWO = $("#vegeta")
 const characterThree = $("#gotenks")
-const characterFour =  $("#gokublack")
+const characterFour = $("#gokublack")
 const characterFive = $("#broly")
 const characterSix = $("#frieza")
 let chosenFighter = $("#goodFighter")
@@ -16,8 +16,8 @@ let characterThreeHealth = 190
 let characterFourHealth = 210
 let characterFiveHealth = 220
 let characterSixHealth = 205
-let attackDamage = Math.floor(Math.random(15) * 50); 
-let counterAttackDamage = Math.floor(Math.random(15) * 50); 
+let attackDamage = Math.floor(Math.random(15) * 50);
+let counterAttackDamage = Math.floor(Math.random(15) * 50);
 $("#deleteSpan").text(characterOneHealth)
 $("#deleteSpan2").text(characterTwoHealth)
 $("#deleteSpan3").text(characterThreeHealth)
@@ -42,7 +42,7 @@ $("#gokumui").on("click", function () {
     // $("#deleteSpan").text(" ")
     $("#deleteSpan2").text(" ")
     $("#deleteSpan3").text(" ")
-    
+
 })
 $("#vegeta").on("click", function () {
     $("#goodFighter").append(`<img src="./img/vegeta.jpg" alt="" class="pickCharacter" id="vegeta">`)
@@ -92,13 +92,32 @@ $("#frieza").on("click", function () {
     // $("#deleteSpan6").text(" ")
 })
 
+
+
 $("#attackBtn").on("click", function () {
     console.log("attacked!")
-    let newHealth = characterFourHealth - attackDamage
-    console.log(newHealth);
-    $("#deleteSpan4").text(newHealth)
+    // let newHealth = characterFourHealth - attackDamage
+    if (characterFourHealth > 0) {
+        characterFourHealth -= 25
+        characterOneHealth -= 15
+        $("#deleteSpan4").text(characterFourHealth)
+        $("#deleteSpan").text(characterOneHealth)
+        console.log(characterFourHealth);
+
+    } else if (characterFourHealth <= 0) {
+        $("#badFighter").append(`<img src="./img/broly.jpg" alt="" class="pickEnemyCharacter" id="broly"> <span id="deleteSpan5">220</span>`)
+        $("#gokublack").css('display', 'none');
+        $("#deleteSpan4").text(" ")
+    } else {
+        return
+    }
+
 })
 
+//broly attack button
+$("#attackBtn1").on("click", function () {
+    console.log();
+})
 
 
 
